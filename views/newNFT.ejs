@@ -1,0 +1,24 @@
+<%- include('partials/head.ejs')  %> 
+<body>
+    <div>
+    <form action="/nft" method="post" >
+        <!-- (Image) -->
+        <label for="image">Image</label>
+            <input type="text" name="image" />
+        <!-- (Name) -->
+        <label for="name">Name</label>
+            <input type="text" name="name" />
+        <!-- (Floor Price) -->
+        <label for="floorPrice">Floor Price</label>
+            <input type="number" name="floorPrice" />
+        <!-- (Current Price) -->
+        <label for="currentPrice">Current Price</label>
+            <input type="number" name="currentPrice" />
+        <!-- (Owners) -->
+        <label for="owners">Owners</label>
+            <input type="number" name="owners" />
+            
+        <button type="submit">SUBMIT</button>
+    </div>
+</body>
+</html>

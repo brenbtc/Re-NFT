@@ -1,0 +1,22 @@
+<%- include('partials/head.ejs')  %> 
+<body>
+    <form action="/artist//<%= artist._id %>?_method=PUT" method="post" >
+        <!-- (Name) -->
+        <label for="name">Name</label>
+            <input type="text" name="name" />
+        <!-- (Creations) -->
+        <label for="creations">Creations</label>
+            <input type="text" name="creations" />
+        <!-- (Owned NFTs) -->
+        <label for="ownedNFT">Owned NFTs</label>
+            <input type="number" name="ownedNFT" />
+        <!-- (Liked) -->
+        <label for="liked">Liked</label>
+            <input type="number" name="liked" />
+        <!-- (About) -->
+            <label for="about">About</label>
+                 <input type="text" name="about" />
+        
+        <button type="submit">SUBMIT</button>
+</body>
+</html>

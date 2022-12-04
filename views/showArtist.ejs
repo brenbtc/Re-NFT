@@ -1,0 +1,20 @@
+<%- include('partials/head.ejs')  %> 
+<body>
+    <div class="aShowCard">
+    <img src="<%= artist.img %> " alt="<%= artist.name %> " width="450">
+        <h2> Name: <%= artist.name %>  </h2>
+        <h5> Created: <%= artist.creations %>  </h5>
+        <h5> Owned NFTs: <%= artist.ownedNFT %>  </h5>
+        <h5> Liked NFTs: <%= artist.liked %>  </h5>
+        <h5> About: <%= artist.about %>  </h5>
+    </div>
+    <div class="showBtn">
+        <!-- //(Delete) -->
+        <form action="<%= artist._id %>?_method=DELETE" method="POST">
+            <button type="submit"><i>DEL</i></button>
+        </form>
+        <!-- //(Edit) -->
+        <a href="/artist/<%= artist._id %>/edit/"><button>Edit</button></a>
+    </div>
+</body>
+</html>

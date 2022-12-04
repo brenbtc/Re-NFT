@@ -5,7 +5,6 @@ const Schema = mongoose.Schema;
 
 const artistSchema = new Schema (
     {
-        rank: {type: String},
         name: {type: String, required: true},
         creations: {type: String, required: true},
         ownedNFT: {type: Number, required: true},

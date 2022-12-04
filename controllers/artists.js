@@ -7,8 +7,8 @@ const router = express.Router();
 
 //(New Route)
 router.get("/new", (req, res) => {
-    res.render("addArtist", {
-        tabTitle: "Ad Artist"
+    res.render("newArtist", {
+        tabTitle: "Add Artist"
     })
 })
 //--------
@@ -26,7 +26,7 @@ router.get("/:id", (req, res) => {
     db.Artist.findById(req.params.id, (err, artist) => {
         res.render("showArtist", {
             artist: artist,
-            tabTitle: "Artist:" + artist.name
+            tabTitle: "Artist"
         })
     })
 })
@@ -56,7 +56,7 @@ router.put("/:id", (req, res) => {
 
 //(Delete Route)
 router.delete('/:id', (req, res) => {
-    db.Car.findByIdAndDelete(req.params.id, () => {
+    db.Artist.findByIdAndDelete(req.params.id, () => {
         res.redirect('/');
     });
 });

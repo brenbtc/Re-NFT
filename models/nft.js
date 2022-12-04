@@ -9,7 +9,7 @@ const nftSchema = new Schema (
      name: {type: String, required: true},
      floorPrice: {type: Number, required: true},
      currentPrice: {type: Number, required: true},
-     owners: {type: String},
+     owners: {type: String, default: 0}
     }
 )
 

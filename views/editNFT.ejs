@@ -1,0 +1,21 @@
+<%- include('partials/head.ejs')  %> 
+<body>
+    <form action="/nft/<%= nft._id %>?_method=PUT" method="post" >
+    <!-- (Image) -->
+    <label for="image">Image</label>
+        <input type="text" name="image" value="<%= nft.image %>" />
+    <!-- (Name) -->
+    <label for="name">Name</label>
+        <input type="text" name="name" value="<%= nft.name %>" required />
+    <!-- (Floor Price) -->
+    <label for="floorPrice">Floor Price</label>
+         <input type="number" name="floorPrice" value="<%= nft.floorPrice %>" required />
+    <!-- (Current Price) -->
+    <label for="currentPrice">Current Price</label>
+        <input type="number" name="currentPrice" value="<%= nft.currentPrice %>" required />
+    <!-- (Owners) -->
+    <label for="owners">Owners</label>
+        <input type="number" name="owners" />
+    <button type="submit">SUBMIT</button>
+</body>
+</html>

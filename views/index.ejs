@@ -1,0 +1,37 @@
+<%- include('partials/head.ejs')  %> 
+<body>
+    <h1 id="home-title">Silqee NFTs</h1>
+    <div id="nft-card">
+        <% for ( nft of nfts) { %> 
+            <a href="/nft/<%= nft._id %> ">
+                <figure class="product-card">
+                    <img src="<%= nft.img %> " alt="<%= nft.name %> " width="450">
+                    <figcaption>
+                        <h2> Name: <%= nft.name %>  </h2>
+                        <h5> Floor Price: <%= nft.floorPrice %> ETH </h5>
+                        <h5> Current Price:<%= nft.currentPrice %> ETH </h5>
+                        <h5> Owners:<%= nft.owners %>  </h5>
+                    </figcaption>
+                </figure>
+            </a>
+            <% } %> 
+    </div>
+    <h1>Featured Artists</h1>
+    <div id="artist-card">
+        <% for ( artist of artists) { %> 
+            <a href="/artist/<%= artist._id %> ">
+                <figure class="product-card">
+                    <img src="<%= artist.img %> " alt="<%= artist.name %> " width="450">
+                    <figcaption>
+                        <h2> Name: <%= artist.name %>  </h2>
+                        <h5> Created: <%= artist.creations %>  </h5>
+                        <h5> Owned NFTs: <%= artist.ownedNFT %>  </h5>
+                        <h5> Liked: <%= artist.liked %>  </h5>
+                        <h5> About: <%= artist.about %>  </h5>
+                    </figcaption>
+                </figure>
+            </a>
+            <% } %> 
+    </div>
+</body>
+</html>

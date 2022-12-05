@@ -1,5 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <%- include('partials/head.ejs')  %> 
+<link rel="stylesheet" href="../../public/main.css">
+</head>
 <body>
+    <%- include('partials/header.ejs')  %> 
+
     <div>
     <form action="/nft" method="post" >
         <!-- (Image) -->
@@ -19,6 +26,8 @@
             <input type="number" name="owners" />
             
         <button type="submit">SUBMIT</button>
+    </form>
     </div>
+<%- include('partials/footer.ejs')  %> 
 </body>
 </html>

@@ -1,5 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <%- include('partials/head.ejs')  %> 
+<link rel="stylesheet" href="../../public/main.css">
+</head>
 <body>
+    <%- include('partials/header.ejs')  %> 
+
     <div class="nShowCard">
         <img src="<%= nft.img %> " alt="<%= nft.name %> " width="450">
             <h2> Name: <%= nft.name %>  </h2>
@@ -13,7 +20,8 @@
             <button type="submit"><i>DEL</i></button>
         </form>
         <!-- //(Edit) -->
-        <a href="/nft/<%= nft._id %>/edit/"><button>Edit</button></a>
+        <a href="/nft/<%=nft._id%>/edit/"><button>Edit</button></a>
     </div>
+    <%- include('partials/footer.ejs')  %> 
 </body>
 </html>

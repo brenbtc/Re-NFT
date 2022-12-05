@@ -1,5 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <%- include('partials/head.ejs')  %> 
+<link rel="stylesheet" href="../../public/main.css">
+</head>
 <body>
+    <%- include('partials/header.ejs')  %> 
+
     <div class="aShowCard">
     <img src="<%= artist.img %> " alt="<%= artist.name %> " width="450">
         <h2> Name: <%= artist.name %>  </h2>
@@ -16,5 +23,6 @@
         <!-- //(Edit) -->
         <a href="/artist/<%= artist._id %>/edit/"><button>Edit</button></a>
     </div>
+    <%- include('partials/footer.ejs')  %> 
 </body>
 </html>

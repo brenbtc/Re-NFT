@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 const nftSchema = new Schema (
     {
-     img: {type: String, required: true},
+     img: {type: String},
      name: {type: String, required: true},
      floorPrice: {type: Number, required: true},
      currentPrice: {type: Number, required: true},
@@ -14,5 +14,5 @@ const nftSchema = new Schema (
 )
 
 
-const NFT = mongoose.model("NFT", nftSchema);
-module.exports = NFT
+const Nft = mongoose.model("Nft", nftSchema);
+module.exports = Nft

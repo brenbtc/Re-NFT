@@ -1,11 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <%- include('partials/head.ejs')  %> 
+<link rel="stylesheet" href="../../public/main.css">
+</head>
 <body>
-    <h1 id="home-title">Silqee NFTs</h1>
+    <%- include('partials/header.ejs')  %> 
+
+    <h2>Featured NFTs</h2>
     <div id="nft-card">
         <% for ( nft of nfts) { %> 
             <a href="/nft/<%= nft._id %> ">
                 <figure class="product-card">
-                    <img src="<%= nft.img %> " alt="<%= nft.name %> " width="450">
+                    <img src="<%= nft.img %> "  width="450">
                     <figcaption>
                         <h2> Name: <%= nft.name %>  </h2>
                         <h5> Floor Price: <%= nft.floorPrice %> ETH </h5>
@@ -16,7 +23,8 @@
             </a>
             <% } %> 
     </div>
-    <h1>Featured Artists</h1>
+    <hr>
+    <h2>Featured Artists</h2>
     <div id="artist-card">
         <% for ( artist of artists) { %> 
             <a href="/artist/<%= artist._id %> ">
@@ -33,5 +41,6 @@
             </a>
             <% } %> 
     </div>
+    <%- include('partials/footer.ejs')  %> 
 </body>
 </html>

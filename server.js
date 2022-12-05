@@ -1,6 +1,7 @@
 //(Dependencies)
 //--------------------------------------------------
 const express = require("express")
+const router = express.Router();
 const app = express()
 const methodOverride = require("method-override")
 require("dotenv").config()
@@ -30,7 +31,7 @@ app.use(methodOverride("_method"));
 //(Routes)
 //---------------------------------------------------
 app.get('/', (req, res) => {
-    db.NFT.find({}, (err, nfts) => {
+    db.Nft.find({}, (err, nfts) => {
         db.Artist.find({},( err, artists) => {
             res.render("index", {
                 nfts: nfts,
@@ -40,6 +41,12 @@ app.get('/', (req, res) => {
         })
     })
 })
+
+router.get('/about', (req, res) => {
+    res.render("about", {title: "About"})
+});
+
+
 app.use("/nft", nftCtrl)
 app.use("/artist", artistCtrl)
 
@@ -48,6 +55,7 @@ app.use("/artist", artistCtrl)
 
 
 //(Listeners)
+//---------------------------------------------------
 app.listen(process.env.PORT, () => {
     console.log(`App is running at localhost:${process.env.PORT}`)
 })

@@ -15,7 +15,7 @@ router.get("/new", (req, res) => {
 
 //(Create Route)
 router.post("/", (req, res) => {
-    db.NFT.create(req.body, (err, nft) => {
+    db.Nft.create(req.body, (err, nft) => {
         res.redirect("/nft/" + nft._id)
     })
 })
@@ -23,9 +23,9 @@ router.post("/", (req, res) => {
 
 //(Show Route)
 router.get("/:id", (req, res) => {
-    db.NFT.findById(req.params.id, (err, nft) => {
+    db.Nft.findById(req.params.id, (err, nft) => {
         res.render("showNFT", {
-            nft: artist,
+            nft: nft,
             tabTitle: "NFT:" + nft.name
         })
     })
@@ -34,7 +34,7 @@ router.get("/:id", (req, res) => {
 
 //(Edit Route)
 router.get('/:id/edit', (req, res) => {
-    db.NFT.findById(req.params.id, (err, nft) => {
+    db.Nft.findById(req.params.id, (err, nft) => {
         res.render("editNFT", {
             nft: nft, 
             tabTitle: "Edit NFT"
@@ -45,7 +45,7 @@ router.get('/:id/edit', (req, res) => {
 
 //(Update Route)
 router.put("/:id", (req, res) => {
-    db.NFT.findByIdAndUpdate(
+    db.Nft.findByIdAndUpdate(
         req.params.id, req.body,
         {new: true}, (err, nft) => {
             res.redirect('/nft/' + nft._id)
@@ -56,9 +56,10 @@ router.put("/:id", (req, res) => {
 
 //(Delete Route)
 router.delete('/:id', (req, res) => {
-    db.Car.findByIdAndDelete(req.params.id, () => {
+    db.Nft.findByIdAndDelete(req.params.id, () => {
         res.redirect('/');
     });
 });
 
 module.exports = router
+

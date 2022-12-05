@@ -1,5 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <%- include('partials/head.ejs')  %> 
+<link rel="stylesheet" href="../../public/main.css">
+</head>
 <body>
+    <%- include('partials/header.ejs')  %> 
+
     <form action="/artist//<%= artist._id %>?_method=PUT" method="post" >
         <!-- (Name) -->
         <label for="name">Name</label>
@@ -18,5 +25,7 @@
                  <input type="text" name="about" />
         
         <button type="submit">SUBMIT</button>
+    </form>
+        <%- include('partials/footer.ejs')  %> 
 </body>
 </html>

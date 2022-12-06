@@ -1,26 +1,51 @@
 /* ------------------------------ */
            /* Body  */
 body{
-    background-color: red;
+    background-color: lightgray;
 }
-
 a:link {
-    text-decoration: none;
-}      
-a:visited {
-    text-decoration: none;
-  }
+    color: black;
+}
 /* ------------------------------ */
+
+
 
 
 
 /* ------------------------------ */
           /* Index EJS */
 
+a:link {
+    text-decoration: none;
+}      
+a:visited {
+    text-decoration: none;
+}
 #artist-card {
     text-align: center;
 }
+#artistHeader{
+    margin-top:20px;
+    text-align: center;
+    text-decoration: underline;
 
+}
+#nft-card {
+    text-align: center;
+}
+#nftHeader{
+    margin-top:20px;
+    text-align: center;
+    text-decoration: underline;
+}
+.product-card{
+    border: 5px solid black;
+    border-radius: 5%;
+    width: 40%;
+    margin: auto
+    
+    
+}
 /* ------------------------------ */
 
 
@@ -42,7 +67,6 @@ a:visited {
 .showBtn{
 display: inline;
 }
-
 /* ------------------------------ */
 
 
@@ -51,7 +75,10 @@ display: inline;
 /* ------------------------------ */
          /* Show Artist */
 .aShowCard {
-    border: absolute black;
+    border: 5px solid black;
+    width: 40%;
+    margin: auto;
+    text-align: center;
 }
 
 /* ------------------------------ */
@@ -80,6 +107,13 @@ display: inline;
 
 /* ------------------------------ */
            /* Show NFT */
+.nShowCard {
+    border: 5px solid black;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+
+}
 /* ------------------------------ */
 
 
@@ -87,6 +121,10 @@ display: inline;
 
 /* ------------------------------ */
            /* Edit NFT  */
+
+.form {
+    display: block;
+}
 /* ------------------------------ */
 
 

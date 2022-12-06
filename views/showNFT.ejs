@@ -14,13 +14,13 @@
             <h5> Current Price: <%= nft.currentPrice %> ETH </h5>
             <h5> Owners: <%= nft.owners %>  </h5>
     </div>
-    <div class="showBtn">
+    <div>
         <!-- //(Delete) -->
-        <form action="<%= nft._id %>?_method=DELETE" method="POST">
+        <form class="showBtn" action="<%= nft._id %>?_method=DELETE" method="POST">
             <button type="submit"><i>DEL</i></button>
         </form>
         <!-- //(Edit) -->
-        <a href="/nft/<%=nft._id%>/edit/"><button>Edit</button></a>
+        <a class="showBtn" href="/nft/<%=nft._id%>/edit/"><button>Edit</button></a>
     </div>
     <%- include('partials/footer.ejs')  %> 
 </body>

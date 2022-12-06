@@ -7,29 +7,29 @@
 <body>
     <%- include('partials/header.ejs')  %> 
 
-    <h2>Featured NFTs</h2>
-    <div id="nft-card">
+    <h2 id="nftHeader">Featured NFTs</h2>
+    <div id="nft-card"  >
         <% for ( nft of nfts) { %> 
             <a href="/nft/<%= nft._id %> ">
                 <figure class="product-card">
                     <img src="<%= nft.img %> "  width="450">
                     <figcaption>
-                        <h2> Name: <%= nft.name %>  </h2>
+                        <h2><%= nft.name %>  </h2>
                         <h5> Floor Price: <%= nft.floorPrice %> ETH </h5>
-                        <h5> Current Price:<%= nft.currentPrice %> ETH </h5>
-                        <h5> Owners:<%= nft.owners %>  </h5>
+                        <h5> Current Price: <%= nft.currentPrice %> ETH </h5>
+                        <h5> Owners: <%= nft.owners %>  </h5>
                     </figcaption>
                 </figure>
             </a>
             <% } %> 
     </div>
     <hr>
-    <h2>Featured Artists</h2>
-    <div id="artist-card">
+    <h2 id="artistHeader">Featured Artists</h2>
+    <div class="card-body" id="artist-card">
         <% for ( artist of artists) { %> 
             <a href="/artist/<%= artist._id %> ">
                 <figure class="product-card">
-                    <img src="<%= artist.img %> " alt="<%= artist.name %> " width="450">
+                    <img src="<%= artist.img %> "  width="450">
                     <figcaption>
                         <h2> Name: <%= artist.name %>  </h2>
                         <h5> Created: <%= artist.creations %>  </h5>
